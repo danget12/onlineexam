@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Password</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    .success {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Change password</h2>
+<div id="successMsg" class="success" style="display:none;"></div>
+
+<div class="form-group">
+  <label for="currentPass">Current password</label>
+  <input type="password" id="currentPass">
+  <div id="currentError" class="error"></div>
+</div>
+
+<div class="form-group">
+  <label for="newPass">New password</label>
+  <input type="password" id="newPass">
+  <div id="newError" class="error"></div>
+</div>
+
+<div class="form-group">
+  <label for="confirmPass">New password (again)</label>
+  <input type="password" id="confirmPass">
+  <div id="confirmError" class="error"></div>
+</div>
+
+<button id="saveBtn" onclick="savePassword()">Save changes</button>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get("user");
+
+
+  function savePassword() {
+    // Clear previous errors
+    document.getElementById("currentError").innerText = "";
+    document.getElementById("newError").innerText = "";
+    document.getElementById("confirmError").innerText = "";
+
+    let current = document.getElementById("currentPass").value;
+    let newPass = document.getElementById("newPass").value;
+    let confirmPass = document.getElementById("confirmPass").value;
+
+    let valid = true;
+
+    if (current !== "1234") {
+      document.getElementById("currentError").innerText = "Incorrect current password.";
+      valid = false;
+    }
+
+    if (newPass.trim() === "") {
+      document.getElementById("newError").innerText = "New password cannot be empty.";
+      valid = false;
+    }
+
+    if (newPass !== confirmPass) {
+      document.getElementById("confirmError").innerText = "Passwords do not match.";
+      valid = false;
+    }
+
+    if (valid) {
+      document.getElementById("successMsg").innerText = "Great! Password is successfully changed.";
+      document.getElementById("successMsg").style.display = "block";
+
+      let btn = document.getElementById("saveBtn");
+      btn.innerText = "Continue";
+      btn.onclick = function() {
+        window.location.href = "myexam.html?user=" + encodeURIComponent(username);
+      };
+    }
+  }
+</script>
+
+</body>
+</html>
