@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Attempt Summary</title>
+<style>
+  :root{--primary:#1e88e5;--border:#d9e2ec;--ok:#1b5e20;--bad:#c62828;}
+  body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f6f8fb}
+  header{display:flex;gap:10px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--border);background:#fff}
+  header h1{font-size:18px;margin:0;flex:1}
+  .wrap{max-width:900px;margin:18px auto;background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:12px;border-bottom:1px solid #eef2f7;text-align:left}
+  th{background:#f7fbff}
+  .saved{color:var(--ok);font-weight:600}
+  .not{color:var(--bad);font-weight:600}
+  .row{display:flex;gap:8px;justify-content:flex-end;padding:12px;background:#fff}
+  .btn{padding:10px 14px;border:none;border-radius:6px;cursor:pointer}
+  .btn.sec{background:#eef2f7}
+  .btn.pri{background:#1e88e5;color:#fff}
+  /* modal */
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center}
+  .box{background:#fff;max-width:520px;padding:18px;border-radius:10px}
+  .box p{margin:0 0 12px 0;line-height:1.45}
+</style>
+</head>
+<body>
+<header>
+  <h1>Attempt Summary</h1>
+  <div></div>
+</header>
+
+<div class="wrap">
+  <table id="tbl">
+    <thead><tr><th>Question</th><th>Status</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <div class="row">
+    <button class="btn sec" onclick="back()">Back to the exam</button>
+    <button class="btn pri" onclick="openConfirm()">Submit All and Finish</button>
+  </div>
+</div>
+
+<!-- confirm modal -->
+<div id="confirm" class="overlay">
+  <div class="box">
+    <p>Once you submit, you will no longer be able to change your answers for this attempt.</p>
+    <div class="row">
+      <button class="btn sec" onclick="closeConfirm()">Cancel</button>
+      <button class="btn pri" onclick="submitNow()">Submit All and Finish</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const params   = new URLSearchParams(location.search);
+const examId   = params.get('examId')   || 'exam1';
+const username = params.get('username') || 'Student';
+const KEY      = `examState_${examId}`;
+
+// 1) get answers: URL > sessionStorage > localStorage
+let answers = null;
+if (params.get('answers')) {
+  try { answers = JSON.parse(decodeURIComponent(params.get('answers'))); } catch(e){}
+}
+if (!answers && sessionStorage.getItem(`answers_${examId}`)) {
+  try { answers = JSON.parse(sessionStorage.getItem(`answers_${examId}`)); } catch(e){}
+}
+if (!answers) {
+  const st = JSON.parse(localStorage.getItem(KEY) || 'null');
+  answers = st?.answers || [];
+}
+
+// ensure localStorage state has the same answers (so "Back" restores them)
+(function syncLocal(){
+  const st = JSON.parse(localStorage.getItem(KEY) || 'null') || {};
+  if (Array.isArray(answers)) {
+    st.answers = answers;
+    localStorage.setItem(KEY, JSON.stringify(st));
+  }
+})();
+
+// load questions just to know how many rows to show
+fetch('questions.json')
+  .then(r=>r.json())
+  .then(all=>{
+    let exam;
+    if (Array.isArray(all)) exam = all.find(e=>e.examId===examId);
+    else if (all[examId]) exam = {examId, title: examId, questions: all[examId]};
+    if(!exam){ document.querySelector('#tbl tbody').innerHTML='<tr><td colspan="2">Exam not found.</td></tr>'; return; }
+    const count = exam.questions.length;
+    const tbody = document.querySelector('#tbl tbody'); tbody.innerHTML='';
+    for(let i=0;i<count;i++){
+      const tr = document.createElement('tr');
+      const qcell = document.createElement('td'); qcell.textContent = `Question ${i+1}`;
+      const scell = document.createElement('td');
+      const answered = (answers[i] !== null && answers[i] !== undefined);
+      scell.textContent = answered ? 'Answer Saved' : 'Not Yet Answered';
+      scell.className = answered ? 'saved' : 'not';
+      tr.append(qcell, scell); tbody.appendChild(tr);
+    }
+  });
+
+function back(){
+  location.href = `exam.html?examid=${encodeURIComponent(examId)}&user=${encodeURIComponent(username)}`;
+}
+function openConfirm(){ document.getElementById('confirm').style.display='flex'; }
+function closeConfirm(){ document.getElementById('confirm').style.display='none'; }
+function submitNow(){
+  const ans = encodeURIComponent(JSON.stringify(answers || []));
+  location.href = `result.html?username=${encodeURIComponent(username)}&examId=${encodeURIComponent(examId)}&answers=${ans}`;
+}
+</script>
+</body>
+</html>

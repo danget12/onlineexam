@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Password Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: darkblue;
+        }
+        .instructions {
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .start-btn {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .start-btn:hover {
+            background: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Quiz Access</h2>
+
+<div class="instructions">
+    <p><strong>Instructions:</strong></p>
+    <ul>
+        <li>This quiz has a <strong>30-minute time limit</strong>.</li>
+        <li>You must know the <strong>quiz password</strong> to start.</li>
+        <li>Once you start, the timer cannot be paused.</li>
+        <li>Make sure you have a stable internet connection before starting.</li>
+    </ul>
+</div>
+
+<button class="start-btn" id="startBtn">Start Attempt</button>
+
+<script>
+    // Get username and examId from URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const user = params.get("user");
+    const examId = params.get("examId");
+
+    // Start Attempt button click
+    document.getElementById("startBtn").addEventListener("click", function () {
+        // Redirect to qpasscheck.html with username and examId
+        window.location.href = `qpasscheck.html?user=${encodeURIComponent(user)}&examId=${encodeURIComponent(examId)}`;
+    });
+</script>
+
+</body>
+</html>

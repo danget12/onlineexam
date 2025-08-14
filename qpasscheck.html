@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Password Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            display: inline-block;
+            min-width: 320px;
+        }
+        input {
+            padding: 10px;
+            margin-top: 15px;
+            width: 90%;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Enter Quiz Password</h2>
+        <p>Please enter the password to start your exam. It is 1212</p>
+        <input type="password" id="examPassword" placeholder="Enter password">
+        <br>
+        <button onclick="checkPassword()">Start Exam</button>
+    </div>
+
+    <script>
+        // Get parameters from URL
+        const params = new URLSearchParams(window.location.search);
+        const user = params.get('user');
+        const examid = params.get('examId');
+
+        // Correct password (change as needed)
+        const correctPassword = "1212";
+
+        function checkPassword() {
+            let enteredPass = document.getElementById("examPassword").value.trim();
+
+            if (enteredPass === correctPassword) {
+                // Open exam page with username & examid
+                window.location.href = `exam.html?user=${encodeURIComponent(user)}&examid=${encodeURIComponent(examid)}`;
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+
+</body>
+</html>

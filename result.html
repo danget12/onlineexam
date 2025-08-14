@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Result</title>
+<style>
+  :root{--primary:#1e88e5;--border:#d9e2ec;--ok:#1b5e20;--bad:#c62828;}
+  body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f6f8fb}
+  header{display:flex;gap:10px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--border);background:#fff}
+  header h1{font-size:18px;margin:0;flex:1}
+  .wrap{max-width:960px;margin:18px auto;background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;padding:16px}
+  .score{font-size:18px;font-weight:700;margin-bottom:10px}
+  .q{border:1px solid var(--border);border-radius:8px;padding:12px;margin:10px 0;background:#fff}
+  .ans{margin:6px 0}
+  .ok{color:var(--ok);font-weight:700}
+  .bad{color:var(--bad);font-weight:700}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .btn{padding:10px 14px;border:none;border-radius:6px;cursor:pointer}
+  .btn.pri{background:var(--primary);color:#fff}
+  .btn.sec{background:#eef2f7}
+</style>
+</head>
+<body>
+<header><h1>Result</h1><div></div></header>
+
+<div class="wrap">
+  <div id="head" class="score">Calculating…</div>
+  <div id="items"></div>
+  <div class="row">
+    <button class="btn pri" onclick="restart()">Restart</button>
+    <button class="btn sec" onclick="home()">Home</button>
+    <button class="btn sec" onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<script>
+const params   = new URLSearchParams(location.search);
+const examId   = params.get('examId')   || 'exam1';
+const username = params.get('username') || 'Student';
+let answers    = [];
+try{ answers = JSON.parse(decodeURIComponent(params.get('answers')||'[]')); }catch(e){ answers=[]; }
+
+fetch('questions.json')
+  .then(r=>r.json())
+  .then(all=>{
+    let exam;
+    if(Array.isArray(all)) exam = all.find(e=>e.examId===examId);
+    else if(all[examId])  exam = {examId, title: examId, questions: all[examId]};
+    if(!exam){ document.getElementById('head').textContent='Exam not found.'; return; }
+
+    const qs = exam.questions.map(q=>({
+      text: q.question || q.text,
+      options: q.options,
+      correct: (typeof q.correct !== 'undefined') ? q.correct : q.correctAnswer
+    }));
+
+    // score
+    let score=0;
+    qs.forEach((q,i)=>{ if(answers[i]===q.correct) score++; });
+    document.getElementById('head').textContent = `${username}, your score: ${score} / ${qs.length}`;
+
+    // list
+    const items = document.getElementById('items');
+    qs.forEach((q,i)=>{
+      const yourIdx = (answers[i] !== null && answers[i] !== undefined) ? answers[i] : null;
+      const yourTxt = (yourIdx===null) ? 'Not answered' : `(${yourIdx}) ${q.options[yourIdx]}`;
+      const corrTxt = `(${q.correct}) ${q.options[q.correct]}`;
+      const ok = (yourIdx===q.correct);
+      const div = document.createElement('div');
+      div.className='q';
+      div.innerHTML = `
+        <div><strong>Q${i+1}.</strong> ${q.text}</div>
+        <div class="ans ${ok?'ok':'bad'}">Your answer: ${yourTxt}</div>
+        <div class="ans ok">Correct answer: ${corrTxt}</div>
+      `;
+      items.appendChild(div);
+    });
+  });
+
+function restart(){
+  // clear saved exam state and start over
+  const key = `examState_${examId}`;
+  const st = JSON.parse(localStorage.getItem(key)||'{}');
+  st.answers  = []; // let exam page rebuild to correct length
+  st.flagged  = [];
+  st.current  = 0;
+  localStorage.setItem(key, JSON.stringify(st));
+  location.href = `exam.html?examId=${encodeURIComponent(examId)}&username=${encodeURIComponent(username)}`;
+}
+function home(){ location.href = `home.html?user=${encodeURIComponent(username)}`; }
+function logout(){ location.href = `index.html`; }
+</script>
+</body>
+</html>

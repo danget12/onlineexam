@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - MoE Exit Exam</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        /* Header Bar */
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 40px;
+            color: #003366;
+        }
+        /* Navigation Menu */
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            padding-bottom: 5px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .nav a.active {
+            border-bottom: 2px solid #007bff;
+            color: #007bff;
+        }
+        /* Content Area */
+        .content {
+            padding: 20px;
+        }
+        .instructions, .my-exam {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.05);
+        }
+        .hidden {
+            display: none;
+        }
+        .exam-btn {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .exam-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="logo.png" alt="MoE Logo">
+        <div class="header-title">MoE - Exit Exam</div>
+        <div class="nav">
+            <a id="generalTab" class="active">General Directions</a>
+            <a id="myExamTab">My Exam</a>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- General Directions Section -->
+        <div id="generalSection" class="instructions">
+            <h2>General Directions</h2>
+            <p>Welcome to the MoE Exit Exam. Please read the following instructions carefully before starting your exam:</p>
+            <ul>
+                <li>The exam duration is 30 minutes.</li>
+                <li>Each question carries equal marks.</li>
+                <li>Do not refresh or close the browser during the exam.</li>
+                <li>Click "Submit" only after answering all questions.</li>
+                <li>Once submitted, you cannot change your answers.</li>
+            </ul>
+            <p>When you are ready, click on <strong>My Exam</strong> to start.</p>
+        </div>
+
+        <!-- My Exam Section -->
+        <div id="myExamSection" class="my-exam hidden">
+    <h2>Available Exams</h2>
+    <script>
+        const params1 = new URLSearchParams(window.location.search);
+        const un = params1.get("user");
+
+        if(un === "ademo") {
+            document.write('<p><strong>Accounting and Finance</strong></p>');
+        }
+        else if(un === "edemo") {
+            document.write('<p><strong>Business and Economics</strong></p>');
+        }
+        else if(un === "mdemo") {
+            document.write('<p><strong>Management</strong></p>');
+        }
+        else if(un === "12demo") {
+            document.write('<p><strong>12th Grade Entrance</strong></p>');
+        }
+        else if(un === "rdemo") {
+            document.write('<p><strong>Remedial</strong></p>');
+        }
+        else if(un === "pdemo") {
+            document.write('<p><strong>PGDT program</strong></p>');
+        }
+        else if(un === "tdemo") {
+            document.write('<p><strong>Teachers Training</strong></p>');
+        }
+        else if(un === "demo") {
+            document.write('<p><strong>Aptitude for NGAT</strong></p>');
+        }
+    </script>
+    <button class="exam-btn" id="startExamBtn">Start Exam</button>
+</div>
+
+    <script>
+        // Get username from URL
+        const params = new URLSearchParams(window.location.search);
+        const user = params.get("user");
+        if (!user) {
+            window.location.href = "index.html"; // Redirect if accessed without login
+        }
+
+        // Tab switching
+        const generalTab = document.getElementById("generalTab");
+        const myExamTab = document.getElementById("myExamTab");
+        const generalSection = document.getElementById("generalSection");
+        const myExamSection = document.getElementById("myExamSection");
+
+        generalTab.onclick = () => {
+            generalTab.classList.add("active");
+            myExamTab.classList.remove("active");
+            generalSection.classList.remove("hidden");
+            myExamSection.classList.add("hidden");
+        };
+
+        myExamTab.onclick = () => {
+            myExamTab.classList.add("active");
+            generalTab.classList.remove("active");
+            myExamSection.classList.remove("hidden");
+            generalSection.classList.add("hidden");
+        };
+
+        // Start Exam button
+        document.getElementById("startExamBtn").onclick = () => {
+            window.location.href = `myexam.html?user=${encodeURIComponent(user)}`;
+        };
+    </script>
+</body>
+</html>

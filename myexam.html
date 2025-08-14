@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accounting and Finance Exams</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .exam-list {
+      max-width: 400px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .exam-list a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .exam-list a:hover {
+      background: #0056b3;
+    }
+  </style>
+  <script>
+    function getuser() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("user");
+    }
+
+    function openQPass(examId) {
+      const user = getuser();
+      if (user) {
+        window.location.href = `qpass.html?user=${encodeURIComponent(user)}&examId=${encodeURIComponent(examId)}`;
+      } else {
+        alert("No username found! Please log in first.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <script>
+    const params1 = new URLSearchParams(window.location.search);
+    const un = params1.get("user");
+
+    if(un === "ademo") {
+        document.write(`
+            <h1><strong>Accounting and Finance Exams</strong></h1>
+            <div class="exam-list">
+                <a href="javascript:void(0)" onclick="openQPass('aquiz1')">Quiz 1</a>
+                <a href="javascript:void(0)" onclick="openQPass('aquiz2')">Quiz 2</a>
+                <a href="javascript:void(0)" onclick="openQPass('amodel')">Model Exam</a>
+                <a href="javascript:void(0)" onclick="openQPass('aexit')">Exit Exam</a>
+            </div>
+        `);
+    }
+    else if(un === "edemo") {
+        document.write(`
+            <h1><strong>Business and Economics Exams</strong></h1>
+            <div class="exam-list">
+                <a href="javascript:void(0)" onclick="openQPass('equiz1')">Quiz 1</a>
+                <a href="javascript:void(0)" onclick="openQPass('equiz2')">Quiz 2</a>
+                <a href="javascript:void(0)" onclick="openQPass('emodel')">Model Exam</a>
+                <a href="javascript:void(0)" onclick="openQPass('eexit')">Exit Exam</a>
+            </div>
+        `);
+    }
+    else if(un === "mdemo") {
+        document.write(`
+            <h1><strong>Management Exams</strong></h1>
+            <div class="exam-list">
+                <a href="javascript:void(0)" onclick="openQPass('mquiz1')">Quiz 1</a>
+                <a href="javascript:void(0)" onclick="openQPass('mquiz2')">Quiz 2</a>
+                <a href="javascript:void(0)" onclick="openQPass('mmodel')">Model Exam</a>
+                <a href="javascript:void(0)" onclick="openQPass('mexit')">Exit Exam</a>
+            </div>
+        `);
+    }
+    else if(un === "12demo") {
+        document.write(`
+            <h1><strong>12th Grade Entrance Exams</strong></h1>
+            <div class="exam-list">
+                <a href="javascript:void(0)" onclick="openQPass('12quiz1')">Quiz 1</a>
+                <a href="javascript:void(0)" onclick="openQPass('12quiz2')">Quiz 2</a>
+                <a href="javascript:void(0)" onclick="openQPass('12model')">Model Exam</a>
+                <a href="javascript:void(0)" onclick="openQPass('12exit')">Entrance Exam</a>
+            </div>
+        `);
+    }
+    else if(un === "rdemo") {
+        document.write(`
+            <h1><strong>Remedial Exams</strong></h1>
+            <div class="exam-list">
+                <a href="javascript:void(0)" onclick="openQPass('rquiz1')">Quiz 1</a>
+                <a href="javascript:void(0)" onclick="openQPass('rquiz2')">Quiz 2</a>
+                <a href="javascript:void(0)" onclick="openQPass('rmodel')">Model Exam</a>
+                <a href="javascript:void(0)" onclick="openQPass('rexit')">Entrance Exam</a>
+            </div>
+        `);
+    }
+    else if(un === "pdemo") {
+        document.write(`
+            <h1><strong>PGDT program Exams</strong></h1>
+            <div class="exam-list">
+                <a href="javascript:void(0)" onclick="openQPass('pquiz1')">Quiz 1</a>
+                <a href="javascript:void(0)" onclick="openQPass('pquiz2')">Quiz 2</a>
+                <a href="javascript:void(0)" onclick="openQPass('pmodel')">Model Exam</a>
+                <a href="javascript:void(0)" onclick="openQPass('pexit')">Exit Exam</a>
+            </div>
+        `);
+    }
+    else if(un === "tdemo") {
+        document.write(`
+            <h1><strong>Teachers Training Exams</strong></h1>
+            <div class="exam-list">
+                <a href="javascript:void(0)" onclick="openQPass('tquiz1')">Quiz 1</a>
+                <a href="javascript:void(0)" onclick="openQPass('tquiz2')">Quiz 2</a>
+                <a href="javascript:void(0)" onclick="openQPass('tmodel')">Model Exam</a>
+                <a href="javascript:void(0)" onclick="openQPass('texit')">Exit Exam</a>
+            </div>
+        `);
+    }
+    else if(un === "demo") {
+        document.write(`
+            <h1><strong>Aptitude for NGAT Exams</strong></h1>
+            <div class="exam-list">
+                <a href="javascript:void(0)" onclick="openQPass('quiz1')">Quiz 1</a>
+                <a href="javascript:void(0)" onclick="openQPass('quiz2')">Quiz 2</a>
+                <a href="javascript:void(0)" onclick="openQPass('model')">Model Exam</a>
+                <a href="javascript:void(0)" onclick="openQPass('exit')">NGAT Exam</a>
+            </div>
+        `);
+    }
+</script>
+ 
+</body>
+</html>

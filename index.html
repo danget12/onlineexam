@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoE - Exit Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .login-box img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .login-box h2 {
+            margin: 5px 0 20px;
+            color: #003366;
+        }
+        .login-box input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-box button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-box button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <img src="logo.png" alt="Logo">
+        <h2>CoBE - Online Exam Practice Site</h2>
+        <input type="text" id="username" placeholder="Username" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button onclick="login()">Log in</button>
+        <div id="error" class="error"></div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const errorDiv = document.getElementById("error");
+
+            // Hardcoded allowed credentials
+           // ademo for Accounting, edemo for Emonomics, mdemo for managment, 12demo for 12th, rdemo for remidials, pdemo fro pgdt, tdemo for teachers training and demo for all aptitiude/ngat
+            if (username === "admin" || username === "ademo" || username === "edemo" || username === "mdemo" || username === "12demo" || username === "rdemo" 
+            || username === "pdemo" || username === "tdemo" || username === "demo") {
+                if(password === "1234"){
+                // Redirect with username in URL 
+                window.location.href = `home.html?user=${encodeURIComponent(username)}`;}else {errorDiv.textContent = "Invalid Password!";}
+            } else {
+                errorDiv.textContent = "Invalid Username!";
+            }
+        }
+    </script>
+</body>
+</html>
