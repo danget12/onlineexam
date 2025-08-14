@@ -95,7 +95,8 @@
                 <li>Click "Submit" only after answering all questions.</li>
                 <li>Once submitted, you cannot change your answers.</li>
             </ul>
-            <p>When you are ready, click on <strong>My Exam</strong> to start.</p>
+            <p>When you are ready, click on <strong>My Exam</strong> to start.</p></br>
+            <button class="exam-btn" id="updatepass">Update password practice</button>
         </div>
 
         <!-- My Exam Section -->
@@ -164,6 +165,10 @@
         // Start Exam button
         document.getElementById("startExamBtn").onclick = () => {
             window.location.href = `myexam.html?user=${encodeURIComponent(user)}`;
+        };
+
+        document.getElementById("updatepass").onclick = () => {
+            window.location.href = `updatepass.html?user=${encodeURIComponent(user)}`;
         };
     </script>
 </body>
