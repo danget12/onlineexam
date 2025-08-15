@@ -65,7 +65,7 @@ fetch('questions.json')
     qs.forEach((q,i)=>{
       const yourIdx = (answers[i] !== null && answers[i] !== undefined) ? answers[i] : null;
       const yourTxt = (yourIdx===null) ? 'Not answered' : `(${yourIdx}) ${q.options[yourIdx]}`;
-      const corrTxt = `(${q.correct}) ${q.options[q.correct]}`;
+      const corrTxt = `${q.options[q.correct]}`;
       const ok = (yourIdx===q.correct);
       const div = document.createElement('div');
       div.className='q';
@@ -93,3 +93,4 @@ function logout(){ location.href = `index.html`; }
 </script>
 </body>
 </html>
+
