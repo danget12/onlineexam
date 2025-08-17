@@ -86,12 +86,13 @@ function restart(){
   st.flagged  = [];
   st.current  = 0;
   localStorage.setItem(key, JSON.stringify(st));
-  location.href = `exam.html?examId=${encodeURIComponent(examId)}&username=${encodeURIComponent(username)}`;
+  location.href = `exam.html?examid=${encodeURIComponent(examId)}&user=${encodeURIComponent(username)}`;
 }
 function home(){ location.href = `home.html?user=${encodeURIComponent(username)}`; }
 function logout(){ location.href = `index.html`; }
 </script>
 </body>
 </html>
+
 
 
