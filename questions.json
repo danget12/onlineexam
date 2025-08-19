@@ -59,110 +59,531 @@
     ]},
 {
         "examId": "gmodel1",
-        "title": "Aptitude for NGAT Model 1",
+        "title": "Biology Model",
         "timeLimit": 180,
         "questions": [
-{      "question": "What is 15% of 200?",      "options": ["20", "30", "40", "50"],      "correct": 1    },
-    {      "question": "Which sentence is grammatically correct?",      "options": [        "She don't like apples",        "She doesn't likes apples",        "She doesn't like apples",        "She didn't likes apples"      ],      "correct": 2    },
-    {      "question": "If 3x + 7 = 22, what is the value of x?",      "options": ["3", "4", "5", "6"],      "correct": 2    },
-    {      "question": "Identify the adverb in: 'He ran quickly to the store.'",      "options": ["He", "ran", "quickly", "store"],      "correct": 2    },
-    {      "question": "What is the next number in the series: 2, 6, 12, 20, ___?",      "options": ["24", "28", "30", "36"],      "correct": 2    },
-    {      "question": "Which word is a synonym for 'happy'?",      "options": ["Angry", "Joyful", "Sad", "Boring"],      "correct": 1    },
-    {      "question": "A train travels 300 km in 5 hours. What is its speed?",      "options": ["50 km/h", "60 km/h", "70 km/h", "80 km/h"],      "correct": 1    },
-    {      "question": "What is the plural of 'child'?",      "options": ["Childs", "Children", "Childes", "Childen"],      "correct": 1    },
-    {      "question": "What is the square root of 144?",      "options": ["10", "12", "14", "16"],      "correct": 1    },
-    {      "question": "Which sentence is in passive voice?",      "options": [        "The cat chased the mouse",        "The mouse was chased by the cat",        "She is reading a book",        "They will win the game"      ],      "correct": 1    },
-    {      "question": "If 5 workers complete a job in 10 days, how long will 2 workers take?",      "options": ["15 days", "20 days", "25 days", "30 days"],      "correct": 2    },
-    {      "question": "What is the past tense of 'go'?",      "options": ["Goed", "Gone", "Went", "Going"],      "correct": 2    },
-    {      "question": "What is the area of a rectangle with length 8 and width 5?",      "options": ["13", "20", "30", "40"],      "correct": 3    },
-    {      "question": "Which word is misspelled?",      "options": ["Definitely", "Separate", "Occasion", "Arguement"],      "correct": 3    },
-    {      "question": "The sum of three consecutive even numbers is 42. What is the smallest number?",      "options": ["10", "12", "14", "16"],      "correct": 1    },
-    {      "question": "Identify the conjunction in: 'I wanted to go, but it rained.'",      "options": ["I", "wanted", "but", "rained"],      "correct": 2    },
-    {      "question": "What is the value of 5! (5 factorial)?",      "options": ["60", "100", "120", "150"],      "correct": 2    },
-    {      "question": "Which sentence uses 'its' correctly?",      "options": [        "Its a beautiful day",        "The dog wagged it's tail",        "The company increased its profits",        "Its' time to leave"      ],      "correct": 2    },
-    {      "question": "A shirt costs $40 after a 20% discount. What was the original price?",      "options": ["$44", "$48", "$50", "$52"],      "correct": 2    },
-    {      "question": "What is the superlative form of 'good'?",      "options": ["Gooder", "More good", "Better", "Best"],      "correct": 3    },
-    {      "question": "What is the next prime number after 11?",      "options": ["12", "13", "14", "15"],      "correct": 1    },
-    {      "question": "Which word is an antonym of 'brave'?",      "options": ["Fearless", "Cowardly", "Strong", "Clever"],      "correct": 1    },
-    {      "question": "If 2^x = 32, what is x?",      "options": ["3", "4", "5", "6"],      "correct": 2    },
-    {      "question": "What is the correct plural of 'mouse' (animal)?",      "options": ["Mouses", "Mice", "Meese", "Mousen"],      "correct": 1    },
-    {      "question": "A car travels 240 km in 3 hours. What is its speed in m/s?",      "options": ["20 m/s", "22.22 m/s", "25 m/s", "30 m/s"],      "correct": 1    },
-    {      "question": "Which sentence is grammatically incorrect?",      "options": [        "She has two cats",        "She have two cats",        "She owns two cats",        "She keeps two cats"      ],      "correct": 1    },
-    {      "question": "What is the least common multiple (LCM) of 6 and 8?",      "options": ["12", "16", "24", "48"],      "correct": 2    },
-    {      "question": "Identify the interjection in: 'Wow! That's amazing!'",      "options": ["Wow", "That's", "amazing", "!"],      "correct": 0    },
-    {      "question": "If 30% of a number is 90, what is the number?",      "options": ["200", "250", "300", "350"],      "correct": 2    },
-    {      "question": "What is the correct contraction for 'they are'?",      "options": ["They're", "Their", "There", "The're"],      "correct": 0    },
-    {      "question": "What is the perimeter of a square with side length 5?",      "options": ["10", "15", "20", "25"],      "correct": 2    },
-    {      "question": "Which word is a preposition?",      "options": ["Jump", "Under", "Happy", "Quickly"],      "correct": 1    },
-    {      "question": "The average of 5 numbers is 20. What is their total sum?",      "options": ["50", "75", "100", "125"],      "correct": 2    },
-    {      "question": "What is the past participle of 'eat'?",      "options": ["Eated", "Ate", "Eaten", "Eating"],      "correct": 2    },
-    {      "question": "If x + y = 15 and x - y = 5, what is x?",      "options": ["5", "7", "10", "12"],      "correct": 2    },
-    {      "question": "Which sentence uses correct parallel structure?",      "options": [        "She likes hiking, swimming, and to bike",        "She likes hiking, swimming, and biking",        "She likes to hike, swimming, and biking",        "She likes to hike, to swim, and biking"      ],      "correct": 1    },
-    {      "question": "What is the cube of 3?",      "options": ["6", "9", "18", "27"],      "correct": 3    },
-    {      "question": "What is the meaning of 'ephemeral'?",      "options": [        "Lasting forever",        "Lasting a very short time",        "Highly valuable",        "Extremely large"      ],      "correct": 1    },
-    {      "question": "A number increased by 20% gives 60. What is the number?",      "options": ["40", "45", "50", "55"],      "correct": 2    },
-    {      "question": "Identify the direct object in: 'She gave him a book.'",      "options": ["She", "gave", "him", "book"],      "correct": 3    },
-    {      "question": "What is the next number in the Fibonacci sequence: 1, 1, 2, 3, 5, ___?",      "options": ["6", "7", "8", "9"],      "correct": 2    },
-    {      "question": "Which sentence avoids the double negative error?",      "options": [        "I don't have no money",        "I don't have any money",        "I ain't got no money",        "I haven't no money"      ],      "correct": 1    },
-    {      "question": "What is the value of sin²θ + cos²θ?",      "options": ["0", "1", "2", "θ"],      "correct": 1    },
-    {      "question": "Choose the correct spelling:",      "options": ["Accomodate", "Acommodate", "Accommodate", "Acomodate"],      "correct": 2    },
-    {      "question": "If 5 books cost $50, how much do 8 books cost?",      "options": ["$60", "$70", "$80", "$90"],      "correct": 2    },
-    {      "question": "What is the comparative form of 'far'?",      "options": ["Farther", "Farest", "Further", "Farer"],      "correct": 0    },
-    {      "question": "What is the sum of angles in a triangle?",      "options": ["90°", "120°", "180°", "360°"],      "correct": 2    },
-    {      "question": "Which sentence is a complex sentence?",      "options": [        "I went to the store",        "I bought milk and bread",        "After I went to the store, I bought milk",        "Store, milk, shopping"      ],      "correct": 2    },
-    {      "question": "What is 12 squared (12²)?",      "options": ["120", "124", "144", "148"],      "correct": 2    },
-    {      "question": "Identify the oxymoron in: 'She heard a deafening silence.'",      "options": ["heard", "deafening", "silence", "deafening silence"],      "correct": 3    },
-    {      "question": "If a shirt costs $25 after a 25% discount, what was its original price?",      "options": ["$30", "$31.25", "$33.33", "$35"],      "correct": 2    },
-    {      "question": "What is the correct punctuation for: 'What time is it__'",      "options": [".", ",", "?", "!"],      "correct": 2    },
-    {      "question": "What is the greatest common divisor (GCD) of 24 and 36?",      "options": ["6", "8", "12", "18"],      "correct": 2    },
-    {      "question": "Which word is a noun?",      "options": ["Run", "Beautiful", "Dog", "Quickly"],      "correct": 2    },
-    {      "question": "A number when divided by 6 leaves a remainder of 3. What is the remainder when its square is divided by 6?",      "options": ["0", "1", "2", "3"],      "correct": 3    },
-    {      "question": "Choose the correct sentence:",      "options": [        "Me and him went to the store",        "Him and me went to the store",        "He and I went to the store",        "I and he went to the store"      ],      "correct": 2    },
-    {      "question": "What is the next number in the series: 1, 4, 9, 16, 25, ___?",      "options": ["30", "34", "36", "40"],      "correct": 2    },
-    {      "question": "Which sentence uses the semicolon correctly?",      "options": [        "I love apples; bananas",        "I love apples; however, I hate bananas",        "I love; apples and bananas",        "I love apples and; bananas"      ],      "correct": 1    },
-    {      "question": "What is the volume of a cube with side length 4?",      "options": ["16", "32", "48", "64"],      "correct": 3    },
-    {      "question": "What is the superlative form of 'far'?",      "options": ["Farther", "Farest", "Furthest", "Farst"],      "correct": 2    },
-    {      "question": "If 3 workers can build a wall in 12 days, how many days will 4 workers take?",      "options": ["6", "8", "9", "10"],      "correct": 2    },
-    {      "question": "Which sentence is in the future perfect tense?",      "options": [        "She will go to the market",        "She will have gone to the market",        "She has gone to the market",        "She went to the market"      ],      "correct": 1    },
-    {      "question": "What is the probability of getting heads when flipping a fair coin?",      "options": ["1/4", "1/3", "1/2", "2/3"],      "correct": 2    },
-    {      "question": "Identify the adjective in: 'The quick brown fox jumps over the lazy dog.'",      "options": ["quick", "fox", "jumps", "dog"],      "correct": 0    },
-    {      "question": "What is the next number in the series: 2, 3, 5, 7, 11, ___?",      "options": ["12", "13", "14", "15"],      "correct": 1    },
-    {      "question": "Which is the correct passive form of: 'They built this house in 1990.'?",      "options": [        "This house was built by them in 1990",        "This house is built by them in 1990",        "This house built by them in 1990",        "This house has been built by them in 1990"      ],      "correct": 0    },
-    {      "question": "What is the value of π (pi) rounded to two decimal places?",      "options": ["3.12", "3.14", "3.16", "3.18"],      "correct": 1    },
-    {      "question": "Which word is an antonym of 'generous'?",      "options": ["Kind", "Stingy", "Friendly", "Happy"],      "correct": 1    },
-    {      "question": "A triangle with sides 3, 4, 5 is what type of triangle?",      "options": [        "Equilateral",        "Isosceles",        "Right-angled",        "Obtuse-angled"      ],      "correct": 2    },
-    {      "question": "What is the correct order of adjectives? (Opinion, Size, Age, Color)",      "options": [        "A beautiful big old red car",        "A big beautiful old red car",        "A red old beautiful big car",        "An old beautiful big red car"      ],      "correct": 0    },
-    {      "question": "If 20% of x = 50% of y, what is x:y?",      "options": ["1:2", "2:1", "5:2", "2:5"],      "correct": 2    },
-    {      "question": "Identify the indirect object in: 'She gave her friend a gift.'",      "options": ["She", "gave", "friend", "gift"],      "correct": 2    },
-    {      "question": "What is the next number in the series: 1, 3, 6, 10, 15, ___?",      "options": ["18", "20", "21", "24"],      "correct": 2    },
-    {      "question": "Which sentence uses correct subject-verb agreement?",      "options": [        "The team are playing well",        "The team is playing well",        "The team were playing well",        "The team be playing well"      ],      "correct": 1    },
-    {      "question": "What is the area of a triangle with base 10 and height 5?",      "options": ["15", "20", "25", "30"],      "correct": 2    },
-    {      "question": "Which is the correct comparative form of 'good'?",      "options": ["Gooder", "More good", "Better", "Best"],      "correct": 2    },
-    {      "question": "A number is first increased by 20% and then decreased by 20%. What is the net change?",      "options": [        "No change",        "4% increase",        "4% decrease",        "10% decrease"      ],      "correct": 2    },
-    {      "question": "What is the next number in the series: 1, 2, 4, 8, 16, ___?",      "options": ["20", "24", "32", "64"],      "correct": 2    },
-    {      "question": "Which sentence contains a dangling modifier?",      "options": [        "Running down the street, the dog chased the mailman",        "The dog chased the mailman running down the street",        "The mailman was chased by the dog running down the street",        "Running down the street, the mailman was chased by the dog"      ],      "correct": 0    },
-    {      "question": "What is the sum of the first 10 odd numbers?",      "options": ["50", "75", "100", "125"],      "correct": 2    },
-    {      "question": "Which word is a conjunction?",      "options": ["Run", "And", "Happy", "Quickly"],      "correct": 1    },
-    {      "question": "If the perimeter of a rectangle is 30 and its length is 10, what is its width?",      "options": ["3", "5", "7", "10"],      "correct": 1    },
-    {      "question": "What is the next number in the series: 1, 8, 27, 64, ___?",      "options": ["81", "100", "125", "144"],      "correct": 2    },
-    {      "question": "Which sentence uses correct parallel structure?",      "options": [        "She likes to hike, swim, and biking",        "She likes hiking, swimming, and biking",        "She likes to hike, swimming, and to bike",        "She likes hiking, to swim, and biking"      ],      "correct": 1    },
-    {      "question": "What is the median of the numbers 3, 1, 7, 5, 9?",      "options": ["3", "5", "7", "9"],      "correct": 1    },
-    {      "question": "Which word is a synonym for 'angry'?",      "options": ["Happy", "Furious", "Sad", "Calm"],      "correct": 1    },
-    {      "question": "A sum doubles in 5 years at simple interest. What is the annual rate?",      "options": ["10%", "15%", "20%", "25%"],      "correct": 2    },
-    {      "question": "What is the next number in the series: 1, 4, 27, 256, ___?",      "options": ["625", "1024", "3125", "4096"],      "correct": 2    },
-    {      "question": "Which sentence uses the subjunctive mood correctly?",      "options": [        "If I was you, I'd leave",        "If I were you, I'd leave",        "If I am you, I'd leave",        "If I be you, I'd leave"      ],      "correct": 1    },
-    {      "question": "What is the smallest prime number greater than 20?",      "options": ["21", "23", "25", "27"],      "correct": 1    },
-    {      "question": "Which word is not a preposition?",      "options": ["Under", "Over", "Between", "Jump"],      "correct": 3    },
-    {      "question": "A rectangle's area is 50 and its length is 10. What is its perimeter?",      "options": ["20", "25", "30", "35"],      "correct": 2    },
-    {      "question": "What is the next number in the series: 1, 5, 14, 30, 55, ___?",      "options": ["75", "85", "91", "100"],      "correct": 2    },
-    {      "question": "Which sentence avoids redundancy?",      "options": [        "The final outcome was surprising",        "The outcome was surprising",        "The end result was surprising",        "The ultimate conclusion was surprising"      ],      "correct": 1    },
-    {      "question": "What is the value of (2 + 3) × 4 - 5?",      "options": ["5", "10", "15", "20"],      "correct": 2    },
-    {      "question": "Identify the metaphor in: 'Time is a thief.'",      "options": ["Time", "is", "a", "thief"],      "correct": 3    },
-    {      "question": "What is the next number in the series: 2, 6, 18, 54, ___?",      "options": ["108", "120", "162", "216"],      "correct": 2    },
-    {      "question": "Which sentence is grammatically correct?",      "options": [        "Between you and I, this is wrong",        "Between you and me, this is wrong",        "Between me and you, this is wrong",        "Between I and you, this is wrong"      ],      "correct": 1    },
-    {      "question": "What is the value of 7 × 8 + 6 ÷ 2?",      "options": ["53", "56", "59", "62"],      "correct": 2    },
-    {      "question": "Which word is an antonym of 'expand'?",      "options": ["Grow", "Contract", "Increase", "Extend"],      "correct": 1    }
-    ]},
+    {
+      "question": "What is the basic structural and functional unit of life?",
+      "options": [
+        "Tissue",
+        "Organ",
+        "Cell",
+        "Organelle"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which organelle is known as the 'powerhouse of the cell'?",
+      "options": [
+        "Nucleus",
+        "Mitochondria",
+        "Ribosome",
+        "Golgi apparatus"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What molecule carries genetic instructions in living organisms?",
+      "options": [
+        "Protein",
+        "Lipid",
+        "DNA",
+        "Carbohydrate"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which process do plants use to convert sunlight into energy?",
+      "options": [
+        "Respiration",
+        "Photosynthesis",
+        "Fermentation",
+        "Transpiration"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the primary function of red blood cells?",
+      "options": [
+        "Fight infection",
+        "Transport oxygen",
+        "Produce hormones",
+        "Store nutrients"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a function of the nervous system?",
+      "options": [
+        "Producing hormones",
+        "Transporting oxygen",
+        "Transmitting electrical signals",
+        "Digesting food"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the role of enzymes in biochemical reactions?",
+      "options": [
+        "Slow down reactions",
+        "Act as substrates",
+        "Speed up reactions",
+        "Store energy"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which biome is characterized by permafrost and low biodiversity?",
+      "options": [
+        "Tropical rainforest",
+        "Desert",
+        "Tundra",
+        "Grassland"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the purpose of mitosis?",
+      "options": [
+        "Produce gametes",
+        "Growth and tissue repair",
+        "Genetic recombination",
+        "Energy production"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a decomposer in an ecosystem?",
+      "options": [
+        "Lion",
+        "Oak tree",
+        "Mushroom",
+        "Eagle"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the main function of the ribosome?",
+      "options": [
+        "Lipid synthesis",
+        "Protein synthesis",
+        "DNA replication",
+        "Waste removal"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which blood type is the universal donor?",
+      "options": [
+        "A",
+        "B",
+        "AB",
+        "O"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the function of the stomata in plants?",
+      "options": [
+        "Absorb water",
+        "Exchange gases",
+        "Store starch",
+        "Anchorage"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which hormone regulates blood sugar levels?",
+      "options": [
+        "Insulin",
+        "Adrenaline",
+        "Estrogen",
+        "Testosterone"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the primary function of white blood cells?",
+      "options": [
+        "Carry oxygen",
+        "Fight infections",
+        "Clot blood",
+        "Produce antibodies"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a vestigial organ in humans?",
+      "options": [
+        "Heart",
+        "Appendix",
+        "Liver",
+        "Lungs"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the term for the study of how traits are inherited?",
+      "options": [
+        "Ecology",
+        "Genetics",
+        "Taxonomy",
+        "Physiology"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which part of the brain controls balance and coordination?",
+      "options": [
+        "Cerebrum",
+        "Cerebellum",
+        "Medulla oblongata",
+        "Hypothalamus"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the function of the xylem in plants?",
+      "options": [
+        "Transport sugars",
+        "Transport water and minerals",
+        "Photosynthesis",
+        "Gas exchange"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a greenhouse gas?",
+      "options": [
+        "Oxygen",
+        "Nitrogen",
+        "Carbon dioxide",
+        "Hydrogen"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the role of tRNA in protein synthesis?",
+      "options": [
+        "Carry amino acids to the ribosome",
+        "Store genetic information",
+        "Break down proteins",
+        "Regulate gene expression"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which of the following is an example of a prokaryotic cell?",
+      "options": [
+        "Animal cell",
+        "Plant cell",
+        "Bacterium",
+        "Fungus"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the purpose of meiosis?",
+      "options": [
+        "Growth and repair",
+        "Producing identical cells",
+        "Producing gametes",
+        "Energy storage"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which scientist is known as the 'father of genetics'?",
+      "options": [
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "Robert Hooke"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the function of the alveoli in the lungs?",
+      "options": [
+        "Pump blood",
+        "Exchange oxygen and carbon dioxide",
+        "Produce mucus",
+        "Filter air"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a biotic factor in an ecosystem?",
+      "options": [
+        "Sunlight",
+        "Water",
+        "Soil",
+        "Predator"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the main function of the large intestine?",
+      "options": [
+        "Absorb nutrients",
+        "Absorb water",
+        "Produce bile",
+        "Break down proteins"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is NOT a function of the liver?",
+      "options": [
+        "Detoxification",
+        "Bile production",
+        "Insulin production",
+        "Glycogen storage"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the term for a change in DNA sequence?",
+      "options": [
+        "Transcription",
+        "Translation",
+        "Mutation",
+        "Replication"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which of the following is a function of the skeletal system?",
+      "options": [
+        "Produce hormones",
+        "Pump blood",
+        "Provide structure and support",
+        "Filter toxins"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the role of the ozone layer?",
+      "options": [
+        "Produce oxygen",
+        "Block UV radiation",
+        "Regulate temperature",
+        "Absorb carbon dioxide"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is an example of natural selection?",
+      "options": [
+        "Farmers breeding crops",
+        "Bacteria becoming resistant to antibiotics",
+        "Humans cloning animals",
+        "Genetically modifying plants"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the function of the nephron in the kidney?",
+      "options": [
+        "Pump blood",
+        "Filter blood and produce urine",
+        "Produce bile",
+        "Store waste"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a function of the endocrine system?",
+      "options": [
+        "Transmit nerve impulses",
+        "Produce and secrete hormones",
+        "Pump blood",
+        "Digest food"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the term for the variety of life in an ecosystem?",
+      "options": [
+        "Sustainability",
+        "Biodiversity",
+        "Homeostasis",
+        "Evolution"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a function of the placenta in mammals?",
+      "options": [
+        "Gas and nutrient exchange",
+        "Produce milk",
+        "Pump blood",
+        "Digest food"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the primary function of the chlorophyll in plants?",
+      "options": [
+        "Absorb sunlight for photosynthesis",
+        "Transport water",
+        "Store starch",
+        "Protect against herbivores"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which of the following is a function of the lymphatic system?",
+      "options": [
+        "Transport oxygen",
+        "Filter pathogens and waste",
+        "Produce hormones",
+        "Digest fats"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the term for a symbiotic relationship where both species benefit?",
+      "options": [
+        "Parasitism",
+        "Commensalism",
+        "Mutualism",
+        "Predation"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which of the following is a function of the pineal gland?",
+      "options": [
+        "Regulate sleep cycles",
+        "Produce adrenaline",
+        "Control blood sugar",
+        "Digest proteins"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the term for the process by which species evolve over time?",
+      "options": [
+        "Homeostasis",
+        "Photosynthesis",
+        "Natural selection",
+        "Respiration"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which of the following is a function of the cytoskeleton?",
+      "options": [
+        "Store genetic information",
+        "Provide cell shape and movement",
+        "Produce energy",
+        "Synthesize proteins"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the role of the ribosome in protein synthesis?",
+      "options": [
+        "Store DNA",
+        "Assemble amino acids into proteins",
+        "Produce ATP",
+        "Break down lipids"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a function of the integumentary system?",
+      "options": [
+        "Pump blood",
+        "Protect against pathogens",
+        "Produce hormones",
+        "Filter waste"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the term for the movement of water across a semipermeable membrane?",
+      "options": [
+        "Diffusion",
+        "Osmosis",
+        "Active transport",
+        "Facilitated diffusion"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a function of the spleen?",
+      "options": [
+        "Produce insulin",
+        "Filter blood and fight infections",
+        "Store bile",
+        "Digest carbohydrates"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the term for the study of interactions between organisms and their environment?",
+      "options": [
+        "Genetics",
+        "Ecology",
+        "Taxonomy",
+        "Physiology"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a function of the thyroid gland?",
+      "options": [
+        "Regulate metabolism",
+        "Produce adrenaline",
+        "Filter blood",
+        "Store calcium"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the term for the process by which plants lose water vapor?",
+      "options": [
+        "Transpiration",
+        "Photosynthesis",
+        "Respiration",
+        "Evaporation"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which of the following is a function of the hypothalamus?",
+      "options": [
+        "Regulate body temperature",
+        "Pump blood",
+        "Produce bile",
+        "Digest proteins"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the term for the maximum population size an environment can sustain?",
+      "options": [
+        "Carrying capacity",
+        "Biotic potential",
+        "Limiting factor",
+        "Ecological footprint"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which of the following is a function of the gallbladder?",
+      "options": [
+        "Produce insulin",
+        "Store bile",
+        "Filter blood",
+        "Digest proteins"
+      ],
+      "correct": 1
+    }
+  ]
+},
 {
         "examId": "gmodel2",
         "title": "Aptitude for NGAT Model 2",
@@ -1583,5 +2004,6 @@
 ]}
 
 ]
+
 
 
